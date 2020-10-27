@@ -4,11 +4,6 @@
  */
 
 var Promise = require('bluebird');
-
-var nodeStyle = require('./callbackReview.js');
-var pluckFirstLineFromFileAsync = Promise.promisify(nodeStyle.pluckFirstLineFromFile);
-var getStatusCodeAsync = Promise.promisify(nodeStyle.getStatusCode);
-
 var fs = require('fs');
 var request = require('request');
 var crypto = require('crypto');
