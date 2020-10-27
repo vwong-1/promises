@@ -11,16 +11,17 @@ var pluckFirstLineFromFile = function (filePath, callback) {
     if (err) {
       callback(err);
     } else {
-      callback(null, content.slice(0, content.indexOf('\n')))
+      callback(null, content.slice(0, content.indexOf('\n')));
     }
-  })
+  });
 };
 
 // This function should retrieve the status code of a GET request to `url`
 var getStatusCode = function (url, callback) {
   request(url, (err, response) => {
-    if (err) { callback(err) }
-    else {
+    if (err) {
+      callback(err);
+    } else {
       callback(null, response.statusCode);
     }
   });
